@@ -6,9 +6,8 @@ class File_model extends CI_Model {
 						->where('f.file_type', 'USER')
                         ->where('f.file_status', 'ACTV')
                         ->where('l.landing_status', 'ACTV')
-                        ->order_by('RAND()')
-                        ->get('files f', 1)
-                        ->row();
+                        ->get('files f')
+                        ->result();
     }
 
     public function getFileForGeneral() {
