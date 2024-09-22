@@ -5,7 +5,7 @@ class File_model extends CI_Model {
         return $this->db->select('f.*, l.*')->join('landings l', 'f.id=l.id_file', 'INNER')
 						->where('f.file_type', 'USER')
                         ->where('f.file_status', 'ACTV')
-                        ->where('f.landing_status', 'ACTV')
+                        ->where('l.landing_status', 'ACTV')
                         ->get('files f')
                         ->result();
     }
