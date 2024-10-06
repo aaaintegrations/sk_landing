@@ -103,7 +103,7 @@
             <div class="form_div">
                 <center>
                     <p style="color:#8C5C23; padding: 10px; width: 190px; border: 1px solid #8C5C23;">
-                        <b>Password: {{ $file->file_password }}</b>
+                        <b>Password: <?php echo $file->file_password ?></b>
                     </p>
                 </center>
                 <button class="submit_class" id="unlock_button" type="button" onclick="unlockLink();">Click to Unlock Your Link</button>
@@ -114,7 +114,7 @@
                     <p class="scan-info">Scanning for virus...</p>
                 </div>
                 <div id="link_div" class="hidden">
-                    <input class="field_class" id="login_txt" type="text" value="{{ $file->url }}" readonly>
+                    <input class="field_class" id="login_txt" type="text" value="<?php echo $file->url ?>" readonly>
                     <button class="submit_class" id="copy_button" type="button" onclick="copyToClipboard();">Copy Download Link</button>
                 </div>
                 <p class="hidden" id="copy_message" style="font-size:14px;">Copy link and paste into new tab to start download</p>
@@ -128,7 +128,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; {{ date('Y') }} All rights reserved</p>
+        <p>&copy; <?php echo date('Y') ?> All rights reserved</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>

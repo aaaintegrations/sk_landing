@@ -7,7 +7,7 @@ class File_model extends CI_Model {
                         ->where('f.file_status', 'ACTV')
                         ->where('l.landing_status', 'ACTV')
                         ->get('files f')
-                        ->result();
+                        ->row();
     }
 
     public function getFileForGeneral() {
