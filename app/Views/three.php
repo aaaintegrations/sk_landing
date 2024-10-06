@@ -871,7 +871,7 @@
                                     </div>
                                     <div class="col-auto flex-grow-1 flex-shrink-1">
                                         <h1 class="download-title text-truncate mb-2 mt-2 xlarge">
-                                            <?php echo $file->file_password ?>
+                                            File Password: <?php echo $file->file_password ?>
                                         </h1>
                                         <div class="download-meta">
                                             <span>
@@ -939,7 +939,7 @@
                                     <div class="col-auto">
                                         <div class="large fw-600">Create download link</div>
                                         <div class="xsmall text-uppercase opacity-100">
-                                            <span style="color:#000;">size:</span> <span style="color:#ff0000;"><?php echo random(2);?> <MB</span>
+                                            <span style="color:#000;">size:</span> <span style="color:#ff0000;"><?php echo rand(2, 2);?> <MB</span>
                                         </div>
                                     </div>
                                 </div>
